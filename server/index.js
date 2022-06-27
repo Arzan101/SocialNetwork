@@ -12,4 +12,6 @@ app.use(cors());
 
 const CONNECTION_URL = 'mongodb+srv://socialnetwork:socialnetwork@cluster0.1np1skv.mongodb.net/?retryWrites=true&w=majority';
 
-mongoose.connect(CONNECTION_URL)
+mongoose.connect(CONNECTION_URL).then(()=>{
+    console.log(`SERVER RUNNING ON: ${PORT}`)
+})
