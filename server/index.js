@@ -5,6 +5,9 @@ import cors from 'cors';
 
 const app = express();
 const PORT = 5000;
+const customMiddleware = (req,res) =>{
+    console.log("Middleware Executed!!!")
+}
 
 
 app.get("/home",(req,res)=>{
