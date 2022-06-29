@@ -5,13 +5,17 @@ import cors from 'cors';
 
 const app = express();
 const PORT = 5000;
-const customMiddleware =()=>{
-    console.log("Middleware Executed!!")
+const customMiddleware =(req,res,next)=>{
+    console.log("Middleware Executed!!");
+    next();
 }
-app.use(customMiddleware)
+app.use(customMiddleware);
 
 app.get("/home",(req,res)=>{
     res.send("I AM home")
+})
+app.get("/about",(req,res)=>{
+    res.send("I AM about")
 })
 app.listen(PORT,()=>{
     console.log("SERVER RUNNING ON:",PORT)
