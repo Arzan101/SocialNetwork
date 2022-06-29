@@ -5,20 +5,16 @@ import cors from 'cors';
 
 const app = express();
 const PORT = 5000;
-const customMiddleware = (req,res) =>{
-    console.log("Middleware Executed!!!")
+const customMiddleware =()=>{
+    console.log("Middleware Executed!!")
 }
-
-app.use(customMiddleware);
+app.use(customMiddleware)
 
 app.get("/home",(req,res)=>{
-    console.log('hello from home page')
-    res.send("hello");
+    res.send("I AM home")
 })
-
-app.get("/about",(req,res)=>{
-    console.log('hello from About page')
-    res.send("hello");
+app.listen(PORT,()=>{
+    console.log("SERVER RUNNING ON:",PORT)
 })
 
 app.use(bodyParser.json({limit: "30mb", extended: true}));
