@@ -2,7 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
-
+import router from './routes/auth';
+import './models/user'
 const app = express();
 const PORT = 5000;
 const customMiddleware =(req,res,next)=>{
