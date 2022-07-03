@@ -9,13 +9,15 @@ const customMiddleware =(req,res,next)=>{
     console.log("Middleware Executed!!");
     next();
 }
-app.use(customMiddleware);
+//app.use(customMiddleware); ye lege toh sabpe middleware lagega home about jo bhi h 
 
 app.get("/home",(req,res)=>{
+    console.log('home page executed')
     res.send("I AM home")
 })
-app.get("/about",(req,res)=>{
-    res.send("I AM about")
+app.get("/login",customMiddleware,(req,res)=>{
+    console.log('login page executed')
+    res.send("I AM Login")
 })
 app.listen(PORT,()=>{
     console.log("SERVER RUNNING ON:",PORT)
