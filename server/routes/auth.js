@@ -8,9 +8,10 @@ router.get('/', (req,res)=>{
 
 router.post('/signup',(req,res)=>{
        const {name, email, password}=req.body;
-       if(!email ||!password || !name){
-              res.json({error:"please add all details"})
+       if(!email || !password || !name){
+              res.status(422).json({error:"please add all details"})
        }
+       res.json({message:"Successfully Posted"})
 
 });
 
