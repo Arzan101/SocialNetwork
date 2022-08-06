@@ -3,9 +3,9 @@ import React from 'react'
 function Navbar() {
   return (
     <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <div className ="nav-wrapper blue">
+      <a href="#" className ="brand-logo left">SocialNetwork</a>
+      <ul id="nav-mobile" className="right">
         <li><a href="sass.html">Sign In</a></li>
         <li><a href="badges.html">Sign Up</a></li>
         <li><a href="collapsible.html">Profile</a></li>
