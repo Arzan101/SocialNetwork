@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav>
     <div className ="nav-wrapper blue">
-      <a href="#" className ="brand-logo left">SocialNetwork</a>
+      <a href="/" className ="brand-logo left">SocialNetwork</a>
       <ul id="nav-mobile" className="right">
         <li><a href="sass.html">Sign In</a></li>
         <li><a href="badges.html">Sign Up</a></li>
