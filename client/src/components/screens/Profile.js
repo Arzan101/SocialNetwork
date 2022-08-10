@@ -8,7 +8,8 @@ function Profile() {
       {
        display:'flex',
        justifyContent:"space-around",
-       margin:"15px 0px"
+       margin:"18px 0px",
+       borderBottom:"1px solid grey"
       }
      }
      >
@@ -30,6 +31,18 @@ function Profile() {
 
        <div>
         <h4>Arzan Khan</h4>
+          <div style={
+            {
+            display:"flex",
+            justifyContent:"space-between",
+            width:"110%"
+          }
+        }>
+           <h5>111 Post</h5>
+           <h5>22.5M Followers</h5>
+           <h5>5 Following</h5>
+          
+          </div>
        </div>
      </div>
     </div>
