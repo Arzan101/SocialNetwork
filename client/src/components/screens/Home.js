@@ -10,7 +10,7 @@ function Home() {
       </div>
 
       <div className='card-content'>
-        <i class="material-icons " style={{color:"red"}}>favorite</i>
+        <i className="material-icons " style={{color:"red"}}>favorite</i>
         <h6>Image Title</h6>
         <p>This is amazing post</p>
         <input type="text" placeholder='add a comment' />
@@ -23,7 +23,7 @@ function Home() {
         <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="post-pic"/>
       </div>
       <div className='card-content'>
-        <i class="material-icons " style={{color:"red"}}>favorite</i>
+        <i className="material-icons " style={{color:"red"}}>favorite</i>
         <h6>Image Title</h6>
         <p>This is amazing post</p>
         <input type="text" placeholder='add a comment' />
@@ -37,7 +37,7 @@ function Home() {
       </div>
 
       <div className='card-content'>
-        <i class="material-icons " style={{color:"red"}}>favorite</i>
+        <i className="material-icons " style={{color:"red"}}>favorite</i>
         <h6>Image Title</h6>
         <p>This is amazing post</p>
         <input type="text" placeholder='add a comment' />
