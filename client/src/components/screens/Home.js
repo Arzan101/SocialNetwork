@@ -51,7 +51,7 @@ function Home() {
       </div>
 
       <div className='card-content'>
-        <i class="material-icons " style={{color:"red"}}>favorite</i>
+        <i className="material-icons" style={{color:"red"}}>favorite</i>
         <h6>Image Title</h6>
         <p>This is amazing post</p>
         <input type="text" placeholder='add a comment' />
