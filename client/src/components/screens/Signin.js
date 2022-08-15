@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import React, {useState} from 'react';
 
 function Signin() {
+  const[name,setName]=useState("");
+  
   return (
   <div className='mycard'>
     <div className='card auth-card input-field' >
