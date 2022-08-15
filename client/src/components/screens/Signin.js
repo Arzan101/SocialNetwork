@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import React, {useState} from 'react';
 
 function Signin() {
-  const[name,setName]=useState("");
-  const[email,setEmail]=useState("");
-  const[password,SetPassword]=useState("");
-
   return (
   <div className='mycard'>
     <div className='card auth-card input-field' >
