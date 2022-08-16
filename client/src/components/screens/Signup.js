@@ -7,7 +7,17 @@ function Signup() {
   const[email,setEmail]=useState("");
   const[password,setPassword]=useState("");
   const PostData=()=>{
-    fetch("https://localhost:5000/signup")
+    fetch("https://localhost:5000/signup",{
+      method:"post",
+      header:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        name:"",
+        email:"",
+        password:""
+      })
+    })
   }
   return (
     <div className='mycard'>
