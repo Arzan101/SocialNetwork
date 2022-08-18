@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {useState} from 'react';
+import M from 'materialize-css';
 
 function Signup() {
   const[name,setName]=useState("");
@@ -19,7 +20,11 @@ function Signup() {
         password:""
       })
     }).then(res=>res.json())
-  
+      .then(data=>{
+        if(data.error){
+          M.toast({html: 'I am a toast!'})
+        }
+      })
 }
   return (
     <div className='mycard'>
