@@ -23,9 +23,10 @@ router.post('/signup',(req,res)=>{
               bcryptjs.hash(password,12)
               .then(hashedpassword=>{
                 const user = new User({
+                    name:name,
                     email:email,
                     password:hashedpassword,
-                    name:name
+                    
              })
              user.save()
                  .then(user => {

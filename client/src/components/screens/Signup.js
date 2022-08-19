@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {useState} from 'react';
-import M from 'materialize-css';
+import React,{useState} from "react";
+import { Link } from "react-router-dom";
+import M from "materialize-css";
 
 function Signup() {
   const[name,setName]=useState("");
@@ -20,9 +19,12 @@ function Signup() {
         password:""
       })
     }).then(res=>res.json())
-      .then(data=>{
+      .then(data=> {
         if(data.error){
-          M.toast({html: 'I am a toast!'})
+          M.toast({html: data.error,classes:"#f44336 red"})
+        }
+        else{
+          M.toast({html: data.message,classes:"#4caf50 green"})
         }
       })
 }
@@ -37,7 +39,7 @@ function Signup() {
          <input type="text" placeholder="password" value={password} 
           onChange={(e)=>{setPassword(e.target.value)}}/>
          <button 
-         class="btn waves-effect waves-light #2196f3 blue"  onClick={()=>PostData()}>Sign Up
+         className="btn waves-effect waves-light #2196f3 blue"  onClick={()=>PostData()}>Sign Up
          </button>
          <h6>
          <Link to ='/Signin'>Already have an account ?</Link>
