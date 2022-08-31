@@ -1,8 +1,9 @@
 import React,{useState} from "react";
-import { Link } from "react-router-dom";
+import { Link,useHistory} from "react-router-dom";
 import M from "materialize-css";
 
 function Signup() {
+  const history = useHistory();
   const[name,setName]=useState("");
   const[email,setEmail]=useState("");
   const[password,setPassword]=useState("");
@@ -25,6 +26,7 @@ function Signup() {
         }
         else{
           M.toast({html: data.message,classes:"#4caf50 green"})
+          history.pushState('/signin')
         }
       })
 }
