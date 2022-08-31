@@ -8,8 +8,8 @@ function Signup() {
   const[email,setEmail]=useState("");
   const[password,setPassword]=useState("");
 
-  const PostData=()=>{
-    fetch("/signup",{
+  const PostData = () => {
+    fetch('/signup',{
       method:"post",
       header:{
         "Content-Type":"application/json"
