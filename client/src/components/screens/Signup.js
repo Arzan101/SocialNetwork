@@ -19,10 +19,15 @@ function Signup() {
         email:"",
         password:""
       })
-    }).then(res=>res.json())
-      .then(data=>{
+    })
+    .then(
+      res=>res.json()
+      )
+    .then(
+        data=>{
         if(data.error){
-          M.toast({html: data.error,classes:"#f44336 red"})
+          M.toast({html: data.error,classes:"#f44336 red"}
+          )
         }
         else{
           M.toast({html: data.message,classes:"#4caf50 green"})
