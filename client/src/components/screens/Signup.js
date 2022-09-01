@@ -9,7 +9,7 @@ function Signup() {
   const[password,setPassword]=useState("");
 
   const PostData = () => {
-    fetch('/signup',{
+    fetch("/signup",{
       method:"post",
       header:{
         "Content-Type":"application/json"
@@ -20,7 +20,7 @@ function Signup() {
         password:""
       })
     }).then(res=>res.json())
-      .then(data=> {
+      .then(data=>{
         if(data.error){
           M.toast({html: data.error,classes:"#f44336 red"})
         }
@@ -29,7 +29,7 @@ function Signup() {
           navigate('/signin')
         }
       })
-}
+    }
   return (
     <div className='mycard'>
       <div className='card auth-card input-field' >

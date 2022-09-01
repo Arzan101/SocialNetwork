@@ -12,7 +12,7 @@ router.get('/', (req,res)=>{
 
 router.post('/signup',(req,res)=>{
        const {name, email, password}=req.body;
-       if(!email || !password || !name){
+       if(!name|| !email || !password){
            return res.status(422).json({error:"please add all details"})
        }
        User.findOne({email:email})
