@@ -1,70 +1,46 @@
+//Client/components/screen/Profile.js
 import React from 'react'
 
 function Profile() {
   return (
-    <div style={
-      {
-        maxWidth:"550px",
-        margin:"0px auto"
-      }
-    }>
-     <div
+    <div style={{
+      maxWidth: "550px",
+      margin: "0px auto"
+    }}>
+      <div style={{
+        display: "flex",
+        justifyContent: "space-around",
+        margin: "18px 0px",
+        borderBottom: "1px solid grey"
+      }}>
+        <div>
+            <img style={{width:"160px", height: "160px", borderRadius:"80px"}}
+            src="https://scontent.fbom2-2.fna.fbcdn.net/v/t1.6435-9/144013642_3932523263466298_82468898311729607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=qSB6-mmvzGcAX-nZj-2&_nc_ht=scontent.fbom2-2.fna&oh=00_AT8PRbKq0nhct_yXUimhCenws1ajFO7b5Z6IMIweOCb1AQ&oe=62D5AB31" alt="profile pic" />
+        </div>
+        <div>
+          <h4>Profile Name</h4>
+            <div style={{display:"flex",
+              justifyContent:"space-between",
+              width: "110%"
+              }}>
+              <h5>40 posts</h5>
+              <h5>500 followers</h5>
+              <h5>21 following</h5>
+            </div>
+        </div>
+      </div>
 
-     style={
-      {
-       display:'flex',
-       justifyContent:"space-around",
-       margin:"18px 0px",
-       borderBottom:"1px solid grey"
-      }
-     }
-     >
-       <div>
-
-        <img
-        
-        style={
-          {
-            width:"160px",
-            height:"160px",
-            borderRadius:"80px",
-
-          }
-
-        }
-        src="https://images.unsplash.com/photo-1655114722721-5c75114be5ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="profile"/>
-       </div>
-
-       <div>
-        <h4>Arzan Khan</h4>
-          <div style={
-            {
-            display:"flex",
-            justifyContent:"space-between",
-            width:"110%"
-          }
-        }>
-           <h5>111 Post</h5>
-           <h5>22.5M Followers</h5>
-           <h5>5 Following</h5>
-          
-          </div>
-       </div>
-       
-       </div>
-
-       <div className="gallery">
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-        <img className="item" src="https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="gallerypic"/>
-       
-       </div>
+      <div className='gallary'>
+          <img className= "item" src="https://source.unsplash.com/random/11" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/12" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/13" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/14" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/15" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/16" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/17" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/18" alt="gallarypic" />
+          <img className= "item" src="https://source.unsplash.com/random/19" alt="gallarypic" />    
+      </div>
     </div>
   )
 }

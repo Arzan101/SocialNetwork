@@ -1,21 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Signin() {
   return (
-  <div className='mycard'>
-    <div className='card auth-card input-field' >
-       <h2>InstaBook</h2>
-       <input type="text" placeholder="email"/>
-       <input type="text" placeholder="password"/>
-       <button class="btn waves-effect waves-light #2196f3 blue" type="submit" name="action">
-        Sign In</button>
-        <h6>
-        <Link to ='/signup'> Register to create account</Link>
-         </h6>
+    <div className="mycard">
+      <div className="card auth-card">
+        <h2>InstaBook</h2>
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Password" />
+        <button className="btn waves-effect waves-light" type="submit">
+          Sign In </button>
+          <h5><Link to="/signup">Register to create an account</Link></h5>
+      </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default Signin
+export default Signin;
