@@ -24,7 +24,7 @@ function Profile() {
               width: "110%"
               }}>
               <h5>40 posts</h5>
-              <h5>500 followers</h5>
+              <h5>102M followers</h5>
               <h5>21 following</h5>
             </div>
         </div>
