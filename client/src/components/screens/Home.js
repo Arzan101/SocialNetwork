@@ -23,7 +23,7 @@ function Home() {
             <div className='card-content'>
               <i className="material-icons" style={{color:"red"}}>favorite</i>
               <h6>Title</h6>
-              <p>this is amazing post</p>
+              <p>this is a amazing post</p>
               <input type="text" placeholder='add a comment' />
             </div>
       </div>
@@ -35,6 +35,7 @@ function Home() {
             <div className='card-content'>
               <i className="material-icons" style={{color:"red"}}>favorite</i>
               <h6>Title</h6>
+          
               <p>this is amazing post</p>
               <input type="text" placeholder='add a comment' />
             </div>
