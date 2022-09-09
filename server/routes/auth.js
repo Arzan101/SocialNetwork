@@ -48,7 +48,13 @@ router.post("/signin",(req,res)=>{
     const {email,password}=req.body;
     if(!email || !password){
         return res.status(422).json({error:"Please add all details"})
-    }   
+    }
+    User.findOne({email:email})
+    .then(savedUser=>{
+        if(!savedUser){
+          return res.status(422).json({error:"Invalid Email or Password"})
+        }
+    })   
 });
 
 
