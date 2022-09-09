@@ -56,7 +56,7 @@ router.post("/signin",(req,res)=>{
         bcryptjs.compare(password,savedUser.password)
         .then(doMatch=>{
             if(doMatch){
-                res.json({message:"Successfully Signed In"})
+                res.json({message:"Server Successfully Signed In"})
             }
             else{
                 return res.status(422).json({error:"Invalid Email or Password"});
