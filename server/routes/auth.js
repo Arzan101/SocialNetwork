@@ -58,7 +58,7 @@ router.post("/signin",(req,res)=>{
         .then(doMatch=>{
             if(doMatch){
                 // res.json({message:"Server Successfully Signed In"})
-                const token = jwt.sign({_id:savedUser._id});
+                const token = jwt.sign({_id:savedUser._id},'secret');
                 const {_id,name,email} = savedUser;
                 res.json({token,user:{_id,name,email}});
                 console.log(token);
