@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import '../../server/models/user.js';
 import bcryptjs from "bcryptjs";
+import jwt from 'jsonwebtoken'
 
 const router = express.Router();
 const User = mongoose.model("User");
