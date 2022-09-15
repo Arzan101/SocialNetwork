@@ -26,6 +26,7 @@ function CreatePost() {
           <span>UPLOAD IMAGE</span>
           <input
            type="file"
+           onChange={(e)=>console.log(e.target.files)}
           />
         </div>
         <div className="file-path-wrapper">
