@@ -1,1 +1,1 @@
-var SecretValue = "qwertyuiop"
+export var SecretValues = "qwertyuiop"
