@@ -7,13 +7,26 @@ function CreatePost() {
       const[image,setImage]=useState("");
   return (
     <div className="card input-field auth-card">
-      <input type="text" placeholder="Title" />
-      <input type="text" placeholder="body" />
+
+      <input 
+       type="text" 
+       placeholder="Title" 
+       value={title}
+       onChange={(e)=>setTitle(e.target.value)}
+      />
+      <input
+       type="text" 
+       placeholder="body" 
+       value={body}
+       onChange={(e)=>setBody(e.target.value)}
+       />
 
       <div className="file-field input-field">
         <div className="btn">
           <span>UPLOAD IMAGE</span>
-          <input type="file" />
+          <input
+           type="file"
+          />
         </div>
         <div className="file-path-wrapper">
           <input className="file-path validate" type="text" />
