@@ -1,7 +1,10 @@
 //Client/src/compenents/screens/CreatePost.js
-import React from "react";
+import React, { useState } from "react";
 
 function CreatePost() {
+      const[title,setTitle]=useState("");
+      const[body,setBody]=useState("");
+      const[image,setImage]=useState("");
   return (
     <div className="card input-field auth-card">
       <input type="text" placeholder="Title" />
