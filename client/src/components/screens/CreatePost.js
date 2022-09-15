@@ -5,6 +5,10 @@ function CreatePost() {
       const[title,setTitle]=useState("");
       const[body,setBody]=useState("");
       const[image,setImage]=useState("");
+
+      const postDetails=()=>{
+        
+      }
   return (
     <div className="card input-field auth-card">
 
@@ -33,7 +37,7 @@ function CreatePost() {
           <input className="file-path validate" type="text" />
         </div>
       </div>
-      <button class="btn waves-effect waves-light blue" type="submit">Submit Post</button>
+      <button class="btn waves-effect waves-light blue" onClick={()=>postDetails()}>Submit Post</button>
 
     </div>
   );
