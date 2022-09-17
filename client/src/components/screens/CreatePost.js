@@ -7,6 +7,10 @@ function CreatePost() {
       const[image,setImage]=useState("");
 
       const postDetails=()=>{
+        const data = new FormData();
+        data.append("file",image);
+        data.append("upload_preset","instabooksite");
+        data.append("cloud_name","instabookcloud101")
         
       }
   return (
