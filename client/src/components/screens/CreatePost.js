@@ -10,9 +10,9 @@ function CreatePost() {
         const data = new FormData();
         data.append("file",image);
         data.append("upload_preset","instabooksite");
-        data.append("cloud_name","instabookcloud101");
+        // data.append("cloud_name","instabookcloud101");
 
-        fetch("https://api.cloudinary.com/instabookcloud101/image/upload/",{
+        fetch("https://api.cloudinary.com/v1_1/instabookcloud101/image/upload/",{
           method: "post",
           body:data })
           .then(res=>res.json())
