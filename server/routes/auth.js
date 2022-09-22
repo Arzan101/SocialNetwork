@@ -13,6 +13,7 @@ router.get('/', (req,res)=>{
     res.send("hello from routes/auth.js")
 });
 
+
 router.post('/signup', (req,res) => {
    const {name,email,password} = req.body;
    if(!name || !email || !password){
