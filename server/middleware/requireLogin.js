@@ -11,6 +11,9 @@ export const requireLogin=(req,res,next
 
  const token=authorization.replace("Bearer","")
  jwt.verify(token,SecretValues,(err,payload)=>{
+   if(err){
+      res.status(401).json({error:"You must be Logged In!"});
+   }
     
  })
 
