@@ -1,8 +1,9 @@
 import jwt from 'jsonwebtoken'
 import { SecretValues } from "../keys.js";
-
-export const requireLogin=(req,res,next
-    )=>{
+import mongoose from 'mongoose';
+import "../models/user.js";
+export const requireLogin=(req,res,next)=>
+ {
  const {authorization} = req.headers;
 
  if(!authorization){
@@ -13,8 +14,13 @@ export const requireLogin=(req,res,next
  jwt.verify(token,SecretValues,(err,payload)=>{
    if(err){
       res.status(401).json({error:"You must be Logged In!"});
-   }
+  }
     
+ })
+
+ const {_id}= payload;
+ User.findById(_id).then(userdata=>{
+   req.user=userdata
  })
 
 
