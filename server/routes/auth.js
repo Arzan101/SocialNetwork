@@ -5,6 +5,7 @@ import '../../server/models/user.js';
 import bcryptjs from "bcryptjs";
 import jwt from 'jsonwebtoken'
 import { SecretValues } from "../keys.js";
+import { requireLogin } from "../middleware/requireLogin.js";
 
 const router = express.Router();
 const User = mongoose.model("User");
@@ -13,7 +14,7 @@ router.get('/', (req,res)=>{
     res.send("hello from routes/auth.js")
 });
 
-router.get("/protected",(req,res)=>{
+router.get("/protected",requireLogin,(req,res)=>{
     res.send("hello user");
 })
 
