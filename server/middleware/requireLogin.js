@@ -14,14 +14,12 @@ export const requireLogin=(req,res,next)=>
  jwt.verify(token,SecretValues,(err,payload)=>{
    if(err){
       res.status(401).json({error:"You must be Logged In!"});
-  }
-    
- })
-
- const {_id}= payload;
- User.findById(_id).then(userdata=>{
-   req.user=userdata
- })
-
+   }
+  const {_id}= payload;
+  User.findById(_id).then(userdata=>{
+    req.user=userdata 
+   })
+ next()
+})
 
 }
