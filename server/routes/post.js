@@ -13,7 +13,7 @@ router.post('/createpost',requireLogin,(req,res)=>{
     const post = new post({
         title:title,
         body:body,
-        postedBy:re.user
+        postedBy:req.user
     })
 
     post.save().then(result=>{
