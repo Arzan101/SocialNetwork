@@ -14,9 +14,9 @@ router.get('/', (req,res)=>{
     res.send("hello from routes/auth.js")
 });
 
-router.get("/protected",requireLogin,(req,res)=>{
-    res.send("hello user");
-})
+// router.get("/protected",requireLogin,(req,res)=>{
+//     res.send("hello user");
+// })
 
 router.post('/signup', (req,res) => {
    const {name,email,password} = req.body;
