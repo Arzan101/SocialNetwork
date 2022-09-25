@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { ObjectId } from "mongoose.Schema.Types";
 
 const postSchema = new mongoose.Schema({
     title: {
@@ -12,6 +13,10 @@ const postSchema = new mongoose.Schema({
     photo:{
         type:String,
         required:true
+    },
+    postedBy:{
+        type:ObjectId,
+        ref:"user"
     }
 }); 
 
