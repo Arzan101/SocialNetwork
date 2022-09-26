@@ -36,3 +36,14 @@ router.get('/allpost',requireLogin,(req,res)=>{
         console.log(err);
     })
 })
+
+router.get("mypost",requireLogin,(req,res)=>{
+    Post.find({postedBy:req.user._id})
+    .then(mypost=>{
+        res.json({myppost})
+    })
+    .catch(err=>{
+        console.log(err);
+    })
+
+})
