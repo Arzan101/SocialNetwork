@@ -1,8 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import { requireLogin } from "../middleware/requireLogin";
+import "../models/post.js"
 
 const router = express.Router()
+const Post = mongoose.model("Post");
 
 router.post('/createpost',requireLogin,(req,res)=>{
     const {title,body}=req.body;
@@ -22,4 +24,10 @@ router.post('/createpost',requireLogin,(req,res)=>{
     .catch(err=>{
         console.log(err)
     })
+})
+
+router.get('/allpost',requireLogin,(req,res)=>{
+    
+
+    .catch()
 })
