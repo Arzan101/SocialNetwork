@@ -27,7 +27,10 @@ router.post('/createpost',requireLogin,(req,res)=>{
 })
 
 router.get('/allpost',requireLogin,(req,res)=>{
-    
+    Post.find()
+    .then(posts=>{
+        res.json({posts})
+    })
 
     .catch()
 })
