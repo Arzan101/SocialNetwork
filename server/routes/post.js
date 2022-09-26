@@ -32,5 +32,7 @@ router.get('/allpost',requireLogin,(req,res)=>{
         res.json({posts})
     })
 
-    .catch()
+    .catch(err=>{
+        console.log(err);
+    })
 })
