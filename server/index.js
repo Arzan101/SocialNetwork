@@ -3,14 +3,14 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import router from './routes/auth.js';
+import routerAuth from './routes/auth.js';
 import './models/user.js';
 
 const app = express();
 const PORT = 5000;
 
 app.use(express.json())
-app.use(router);
+app.use(routerAuth);
 
 const customMiddleware = (req,res,next) =>{
     console.log("Middleware Executed!!!");
