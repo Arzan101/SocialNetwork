@@ -3,10 +3,10 @@ import mongoose from "mongoose";
 import { requireLogin } from "../middleware/requireLogin";
 import "../models/post.js"
 
-const router = express.Router()
+const routerPost = express.Router()
 const Post = mongoose.model("Post");
 
-router.post('/createpost',requireLogin,(req,res)=>{
+routerPost.post('/createpost',requireLogin,(req,res)=>{
     const {title,body}=req.body;
     if(!title || !body){
         return res.status(422).json({error:"Please add all fields"});
@@ -26,7 +26,7 @@ router.post('/createpost',requireLogin,(req,res)=>{
     })
 })
 
-router.get('/allpost',requireLogin,(req,res)=>{
+routerPost.get('/allpost',requireLogin,(req,res)=>{
     Post.find()
     .populate("postedBy","_id name")
     .then(posts=>{
@@ -38,7 +38,7 @@ router.get('/allpost',requireLogin,(req,res)=>{
     })
 })
 
-router.get("mypost",requireLogin,(req,res)=>{
+routerPost.get("mypost",requireLogin,(req,res)=>{
     Post.find({postedBy:req.user._id})
     .then(mypost=>{
         res.json({myppost})
@@ -49,4 +49,4 @@ router.get("mypost",requireLogin,(req,res)=>{
 
 })
 
-export default router;
+export default routerPost;
