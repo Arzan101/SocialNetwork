@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken'
 import { SecretValues } from "../keys.js";
 import { requireLogin } from "../middleware/requireLogin.js";
 
-const router = express.Router();
+const routerAuth = express.Router();
 const User = mongoose.model("User");
 
 router.get('/', (req,res)=>{
@@ -18,7 +18,7 @@ router.get('/', (req,res)=>{
 //     res.send("hello user");
 // })
 
-router.post('/signup', (req,res) => {
+routerAuth.post('/signup', (req,res) => {
    const {name,email,password} = req.body;
    if(!name || !email || !password){
        return res.status(422).json({error:"Please add all details"})
@@ -51,7 +51,7 @@ router.post('/signup', (req,res) => {
 
 //signin
 
-router.post("/signin",(req,res)=>{
+routerAuth.post("/signin",(req,res)=>{
     const {email,password}=req.body;
     if(!email || !password){
         return res.status(422).json({error:"SIGN IN :-Please add all details"});

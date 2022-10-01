@@ -41,5 +41,7 @@ mongoose.connect(CONNECTION_URL).then(()=>{
 })
 
 
-
+app.listen(PORT,()=>{
+    console.log("SERVER RUNNING ON:",PORT) //Terminal
+})
 

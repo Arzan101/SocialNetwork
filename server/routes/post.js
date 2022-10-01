@@ -48,3 +48,5 @@ router.get("mypost",requireLogin,(req,res)=>{
     })
 
 })
+
+export default router;
