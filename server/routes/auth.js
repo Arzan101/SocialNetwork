@@ -10,14 +10,7 @@ import { requireLogin } from "../middleware/requireLogin.js";
 const routerAuth = express.Router();
 const User = mongoose.model("User");
 
-router.get('/', (req,res)=>{
-    res.send("hello from routes/auth.js")
-});
-
-// router.get("/protected",requireLogin,(req,res)=>{
-//     res.send("hello user");
-// })
-
+//signup
 routerAuth.post('/signup', (req,res) => {
    const {name,email,password} = req.body;
    if(!name || !email || !password){
