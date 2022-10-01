@@ -45,8 +45,8 @@ function CreatePost() {
         body:data })
         .then(res=>res.json())
         .then(data=>{
-             //console.log(data);
-             setUrl(data.url);
+             console.log(data);
+             //setUrl(data.url);
         })
         .catch(err=>{
             console.log(data);
