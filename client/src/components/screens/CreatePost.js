@@ -30,6 +30,7 @@ function CreatePost() {
             }
             else{
               M.toast({html:"Successully Post Created", classes:"#43a047 green darken-1"})
+              navigate('/');
             }
           }).catch(err=>{
             console.log(err)
