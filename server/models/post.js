@@ -16,7 +16,8 @@ const postSchema = new mongoose.Schema({
         required:true
     },
     postedBy:{
-        type:ObjectId,
+        // type:ObjectId,
+        type: Schema.Types.ObjectId,
         ref:"user"
     }
 }); 
