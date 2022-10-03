@@ -10,6 +10,7 @@ function CreatePost() {
     const navigate = useNavigate();
    
     useEffect(()=>{
+      if(url){
         fetch("/createpost",{
             method:"post",
             headers: {
@@ -33,7 +34,8 @@ function CreatePost() {
           }).catch(err=>{
             console.log(err)
           })
-    },[body, navigate, title, url])
+    }
+  },[body, navigate, title, url])
 
     const postDetails= ()=>{
         const data = new FormData();
