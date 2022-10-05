@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useReducer } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -12,17 +12,25 @@ import { initialState,reducer } from './reducers/userReducer';
 
 const UserContext = createContext();
 
+const Routing =() =>{
+  return(
+    <Routes>
+    <Route path="/" element={<Home />} /> 
+    <Route path="/signin" element={<Signin />} /> 
+    <Route path="/signup" element={<Signup />} /> 
+    <Route path="/profile" element={<Profile />} /> 
+    <Route path="/create" element={<CreatePost />} />
+  </Routes>
+  )
+};
+
 function App() {
+  const [state,dispatch]= useReducer(reducer,initialState);
   return (
     <BrowserRouter>
       <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} /> 
-          <Route path="/signin" element={<Signin />} /> 
-          <Route path="/signup" element={<Signup />} /> 
-          <Route path="/profile" element={<Profile />} /> 
-          <Route path="/create" element={<CreatePost />} />
-        </Routes>
+      <Routing />
+       
     </BrowserRouter>
   );
 }
