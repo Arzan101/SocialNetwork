@@ -1,6 +1,7 @@
+//Client/.../screen/CreatPost.js
 import React, { useEffect, useState } from 'react';
 import M from 'materialize-css';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 function CreatePost() {
     const [title,setTitle] = useState("");
@@ -11,10 +12,10 @@ function CreatePost() {
    
     useEffect(()=>{
       if(url){
-        fetch("/createpost",{
+        fetch('/createpost',{
             method:"post",
             headers: {
-                "Content-Type":"application/json",
+                "Content-Type": "application/json",
                 "Authorization": "Bearer "+localStorage.getItem("jwt")
             },
             body:JSON.stringify({
@@ -24,28 +25,30 @@ function CreatePost() {
             })
         }).then(res=>res.json)
         .then(data=>{ 
-            console.log(data);
             if(data.error){
-              M.toast({html: data.error, classes:"#b71c1c red darken-4"})
+              // console.log("data.error:"+data)
+              M.toast({html: "Not Posted", classes:"#b71c1c red darken-4"});
             }
             else{
-              M.toast({html:"Successully Post Created", classes:"#43a047 green darken-1"})
-              navigate('/');
+              console.log("data:"+data)
+              M.toast({html: "Posted", classes:"#43a047 green darken-1"});
+              navigate("/");
             }
           }).catch(err=>{
             console.log(err)
           })
-    }
-  },[body, navigate, title, url])
+   }
+  },[title,body,navigate,url])
 
     const postDetails= ()=>{
         const data = new FormData();
         data.append("file",image);
-        data.append("upload_preset","instabooksite");
+        data.append("upload_preset","instabookSite");
         
-        fetch("https://api.cloudinary.com/v1_1/instabookcloud101/image/upload/",{
+        fetch("https://api.cloudinary.com/v1_1/instabookcloud/image/upload/",{
         method:"post",
-        body:data })
+        body:data 
+        })
         .then(res=>res.json())
         .then(data=>{
             //  console.log(data);
@@ -63,8 +66,7 @@ function CreatePost() {
         maxWidth: "500px",
         padding: "20px",
         textAlign: "center"
-    }}
-    >
+    }}>
         <input 
         type="text" 
         placeholder='title'
