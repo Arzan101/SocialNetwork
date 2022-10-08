@@ -7,15 +7,32 @@ import { UserContext } from '../App';
 
 function Navbar() {
   const{state, dispatch}= useContext(UserContext)
+  const renderList = ()=>{
+    if(state){
+      return[
+        <li><Link to="/profile">Profile</Link></li>,
+        <li><Link to="/create">Post</Link></li>,
+        <li><Link to="/signout">Signout</Link></li>
+      ]
+    }else{
+      return[
+        <li><Link to="/signin">SignIn</Link></li>,
+         <li><Link to="/signup">SignUp</Link></li>
+
+      ]
+
+    }
+  }
   return (
     <nav>
     <div className="nav-wrapper blue">
       <Link to="/" className="brand-logo left"> InstaBook </Link>
       <ul id="nav-mobile" className="right">
-        <li><Link to="/signin">SignIn</Link></li>
-        <li><Link to="/signup">SignUp</Link></li>
-        <li><Link to="/profile">Profile</Link></li>
-        <li><Link to="/create">Post</Link></li>
+        {/* <li><Link to="/signin">SignIn</Link></li>
+         <li><Link to="/signup">SignUp</Link></li>
+         <li><Link to="/profile">Profile</Link></li>
+         <li><Link to="/create">Post</Link></li>*/}
+         {renderList()}
       </ul>
     </div>
   </nav>
