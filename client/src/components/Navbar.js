@@ -12,7 +12,12 @@ function Navbar() {
       return[
         <li><Link to="/profile">Profile</Link></li>,
         <li><Link to="/create">Post</Link></li>,
-        <li><Link to="/signout">Signout</Link></li>
+        <li>
+        <button className="btn waves-effect waves-light #2196f3 blue" 
+        onClick={()=>{
+          
+        }}>Sign Out</button>
+        </li>
       ]
     }else{
       return[
