@@ -28,11 +28,8 @@ function Navbar() {
     <div className="nav-wrapper blue">
       <Link to="/" className="brand-logo left"> InstaBook </Link>
       <ul id="nav-mobile" className="right">
-        {/* <li><Link to="/signin">SignIn</Link></li>
-         <li><Link to="/signup">SignUp</Link></li>
-         <li><Link to="/profile">Profile</Link></li>
-         <li><Link to="/create">Post</Link></li>*/}
-         {renderList()}
+        
+       {renderList()}
       </ul>
     </div>
   </nav>
