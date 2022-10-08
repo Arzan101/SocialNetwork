@@ -1,12 +1,13 @@
 //Client/src/components/Navbar.js
 import React from 'react';
 import {useContext} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Navigate, useNavigate} from 'react-router-dom';
 import { UserContext } from '../App';
 
 
 function Navbar() {
   const{state, dispatch}= useContext(UserContext)
+  const navigate = useNavigate();
   const renderList = ()=>{
     if(state){
       return[
@@ -15,7 +16,9 @@ function Navbar() {
         <li>
         <button className="btn waves-effect waves-light #2196f3 blue" 
         onClick={()=>{
-          
+          localStorage.clear()
+          dispatch({type:"CLEAR"});
+          navigate('/signin')
         }}>Sign Out</button>
         </li>
       ]
