@@ -1,8 +1,12 @@
 //Client/src/components/Navbar.js
 import React from 'react';
+import {useContext} from 'react';
 import {Link} from 'react-router-dom';
+import { UserContext } from '../App';
+
 
 function Navbar() {
+  const{state, dispatch}= useContext(UserContext)
   return (
     <nav>
     <div className="nav-wrapper blue">
